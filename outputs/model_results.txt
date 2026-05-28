@@ -1,0 +1,40 @@
+HASIL EVALUASI RANDOM FOREST
+==================================================
+Accuracy  : 0.9083
+F1-Score  : 0.9077
+AUC-ROC   : 0.9782
+
+Classification Report:
+              precision    recall  f1-score   support
+
+         Low       0.89      0.95      0.92        41
+      Medium       0.90      0.84      0.87        44
+        Peak       0.94      0.94      0.94        35
+
+    accuracy                           0.91       120
+   macro avg       0.91      0.91      0.91       120
+weighted avg       0.91      0.91      0.91       120
+
+Confusion Matrix:
+[[39  2  0]
+ [ 5 37  2]
+ [ 0  2 33]]
+
+Feature Importance:
+recovery_score         0.126595
+physical_composite     0.108378
+cumulative_load        0.098179
+phase_encoded          0.096293
+week                   0.093378
+t_c_ratio              0.079086
+punch_speed_m_s        0.072118
+endurance_score        0.061004
+vo2max_ml_kg_min       0.049163
+cortisol_nmol_L        0.047495
+ck_u_L                 0.040159
+testosterone_nmol_L    0.030413
+hrv_ms                 0.025860
+reaction_time_ms       0.019122
+training_load          0.018886
+strength_index         0.018054
+lactate_mmol_L         0.015816
