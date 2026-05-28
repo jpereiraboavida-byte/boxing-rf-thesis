@@ -2,7 +2,7 @@
 app.py — Streamlit Dashboard
 Boxing Performance Prediction System
 Hala'o: streamlit run dashboard/app.py
-Autór: Digo Pereira
+Autór: Joao Nuno Urle Pereira Boavida
 """
 
 import streamlit as st
@@ -340,7 +340,7 @@ with tab5:
             st.markdown("**Indikadór Fíziku (Physical Performance)**")
             vo2max      = st.slider("VO2max (ml/kg/min)",                      35.0,  75.0,  60.0, 0.5)
             reaction    = st.slider("Tempu Reaksaun / Reaction Time (ms)",    150.0, 300.0, 195.0, 1.0)
-            punch_speed = st.slider("Velosidade Sogu / Punch Speed (m/s)",      6.0,  14.0,  11.0, 0.1)
+            punch_speed = st.slider("Velosidade Tuku / Punch Speed (m/s)",      6.0,  14.0,  11.0, 0.1)
             endurance   = st.slider("Endurance Score",                         20.0, 100.0,  78.0, 1.0)
             strength    = st.slider("Strength Index",                          20.0, 100.0,  77.0, 1.0)
         with col3:
@@ -377,7 +377,7 @@ with tab5:
                 label         = LABEL_ORDER[prediction]
 
                 color_map = {"Low": "#e74c3c", "Medium": "#f39c12", "Peak": "#2ecc71"}
-                label_tet = {"Low": "Kraik",   "Medium": "Médiu",   "Peak": "Piku"}
+                label_tet = {"Low": "Kraik",   "Medium": "Médiu",   "Peak": "Peak"}
                 desc_map  = {
                     "Low":    "Karga aas ka rekuperasaun inadekuadu — High load or inadequate recovery",
                     "Medium": "Estadus tranzisaun — Transitional state, progressing well",
@@ -406,7 +406,7 @@ with tab5:
                 with rc1:
                     st.markdown("**Probabilidade per Klas — Class Probabilities**")
                     prob_df = pd.DataFrame({
-                        "Klas (Class)": ["Kraik (Low)", "Médiu (Medium)", "Piku (Peak)"],
+                        "Klas (Class)": ["Kraik (Low)", "Médiu (Medium)", "Peak (Peak)"],
                         "Probabilidade": [f"{p:.1%}" for p in probabilities],
                     })
                     st.dataframe(prob_df, use_container_width=True, hide_index=True)
@@ -424,7 +424,7 @@ with tab5:
 st.divider()
 st.markdown(
     "<div class='footer-credit'>"
-    "Dezenvolvidu husi <span>Digo Pereira</span> &nbsp;|&nbsp; "
+    "Dezenvolvidu husi <span>Joao Nuno Urle Pereira Boavida</span> &nbsp;|&nbsp; "
     "Teze Siénsia Komputadór &nbsp;|&nbsp; "
     "Random Forest Boxing Performance Prediction &nbsp;|&nbsp; "
     "2024 / 2025"
